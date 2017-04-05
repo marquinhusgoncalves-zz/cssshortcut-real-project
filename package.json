@@ -1,0 +1,24 @@
+{
+  "name": "fake-project",
+  "version": "1.0.0",
+  "description": "fake",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marquinhusgoncalves/cssshortcut-real-project.git"
+  },
+  "author": "Marquinhus Gonçalves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marquinhusgoncalves/cssshortcut-real-project/issues"
+  },
+  "homepage": "https://github.com/marquinhusgoncalves/cssshortcut-real-project#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-stylus": "^2.6.0"
+  }
+}
