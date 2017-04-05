@@ -1,7 +1,7 @@
 {
-  "name": "fake-project",
+  "name": "real-project",
   "version": "1.0.0",
-  "description": "fake",
+  "description": "course real project front end",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

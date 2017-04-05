@@ -4,6 +4,37 @@
 
 > :rocket: A template to help you create open source projects more organized.
 
+## Stack
+
+- Task Runner: [Gulp](http://gulpjs.com/)
+- HTML Template Engine: [Pug](https://pugjs.org/api/getting-started.html)
+- CSS Preprocessor: [Stylus](http://stylus-lang.com/)
+
+## Folders Structure
+
+.
+├── README.md
+├── LICENSE.md
+├── CONTRIBUTING.md
+├── out/
+├── src/
+|   ├── assets/
+|   |   ├── img/
+|   |   ├── scripts/
+|   |   |   └── script.js
+|   |   └── styles/
+|   |       └── style.styl
+|   ├── partials/
+|   |   ├── footer.pug
+|   |   └── header.pug
+|   ├── layouts/
+|   |   └── default.pug
+|   └── index.pug
+├── gulpfile.js
+├── package.json
+├── .editorconfig
+└── .gitignore
+
 ## Versioning
 
 To keep better organization of releases we follow the [Semantic Versioning 2.0.0](http://semver.org/) guidelines.
