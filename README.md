@@ -4,6 +4,24 @@
 
 > :rocket: A template to help you create open source projects more organized.
 
+## Run the project locally
+
+1 - Prepare the enviromment
+
+`$ npm install -g gulp-cli`
+
+2- Clone the project and install the dependencies:
+
+```
+$ git clone https://github.com/marquinhusgoncalves/cssshortcut-real-project.git
+$ cd cssshortcut-real-project
+$ npm install
+```
+
+3 - Run static server and livereload
+
+`$ gulp server`
+
 ## Stack
 
 - Task Runner: [Gulp](http://gulpjs.com/)
@@ -34,6 +52,11 @@
 ├── package.json
 ├── .editorconfig
 └── .gitignore
+
+## Automatic Tasks
+
+- `$ gulp build`: Compile, concat and minify all files.
+- `$ gulp server`: Watch the files to build and start a static server.
 
 ## Versioning
 
