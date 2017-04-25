@@ -1,0 +1,46 @@
+doctype html
+html
+    head
+    //- Metas
+    meta(name="viewport" content="width=device-width, minium-scale=1.0, maxium-scale=1.0")
+    meta(charset="utf8")
+
+    - var title = "Projeto Front-End Title"
+    - var description = "Projeto Front-End Description"
+    - var url = "http://www.marquinhusgoncalves.com"
+    - var img = "http://marquinhusgoncalves.com/public/img/face.jpg"
+    //- SEO
+    meta(name="description" content=description)
+    meta(name="robots" content="index, follow")
+    title Projeto Front-End Title
+
+    //- Open Graph
+    meta(property="og:type" content="website")
+    meta(property="og:title" content=title)
+    meta(property="og:description" content=description)    
+    meta(property="og:url" content=url)
+    meta(property="og:image" content=img)
+
+    //- Twitter Cards
+    meta(name="twitter:card" content="summary")
+    meta(name="twitter:title" content=title)
+    meta(name="twitter:description" content=description)    
+    meta(name="twitter:url" content=url)
+    meta(name="twitter:image" content=img)
+
+    //- Styles
+    link(rel="stylesheet" href="assets/styles/style.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css")
+
+    //- Fonts
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Roboto")    
+
+    body
+        include ./../partials/header.pug
+
+        main
+            block content
+
+        include ./../partials/footer.pug
+
+        script(type="text/javascript" href="assets/styles/style.css" async)
