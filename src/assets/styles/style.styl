@@ -5,6 +5,9 @@ highlight-color = #ff0066
 secundary-color = #212121
 bg-color = #033
 
+*
+    box-sizing: border-box
+
 /* Header */
 .header
     width: 100%
@@ -14,6 +17,13 @@ bg-color = #033
     border: 1px dashed black
     display: flex
     align-items: center
+
+@media screen and (max-width: 400px)
+    .menu
+        width: 100%
+        justify-content: center
+        order: 2
+        margin: 10px 0
 
 .menu-itens
     margin-top: 0
@@ -34,4 +44,29 @@ bg-color = #033
     border: 1px dashed black
     width: 100%
     max-width: 800px
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
 
+
+.profile
+    width: 230px
+    border: 1px dashed
+    margin-left: auto
+
+@media screen and (max-width: 400px)
+    .profile
+        width: 100%
+        text-align: center
+        order: 1
+        margin: 10px 0        
+
+.profile-img
+    vertical-align: middle
+    border-radius: 50%
+    margin: 5px
+
+.profile-text
+    margin: 5px
+    display: inline-block
+    color: #fff
