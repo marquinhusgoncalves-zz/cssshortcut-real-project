@@ -36,20 +36,24 @@ $ npm install
 ├── CONTRIBUTING.md
 ├── out/
 ├── src/
+├── ├── icons/
 |   ├── assets/
 |   |   ├── img/
 |   |   ├── scripts/
 |   |   |   └── script.js
 |   |   └── styles/
+|   |       └── modules/
 |   |       └── style.styl
 |   ├── partials/
 |   |   ├── footer.pug
 |   |   └── header.pug
 |   ├── layouts/
 |   |   └── default.pug
+|   ├── projects.pug
 |   └── index.pug
 ├── gulpfile.js
 ├── package.json
+├── projects.json
 ├── .editorconfig
 └── .gitignore
 
