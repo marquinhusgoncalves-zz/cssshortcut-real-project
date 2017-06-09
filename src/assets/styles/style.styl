@@ -1,27 +1,8 @@
-// @import "variables.styl"
-
-/* Colors */
-highlight-color = #ff0066
-secundary-color = #212121
-bg-color = #033
-
-
-/* Box Model */
-*
-    box-sizing: border-box
-
-// Use this mixin to developer
-border()
-    // border: 1px dashed #000
-
-.container
-    border()
-    width: 100%
-    max-width: 800px
-    margin: 0 auto
-    display: flex
-    flex-wrap: wrap
-
-/* Partials */
-@import 'partials/header.styl'
-@import 'partials/footer.styl'
+/* modules */
+@import 'modules/theme.styl'
+@import 'modules/global.styl'
+@import 'modules/profile.styl'
+@import 'modules/texts.styl'
+@import 'modules/container.styl'
+@import 'modules/header.styl'
+@import 'modules/footer.styl'
