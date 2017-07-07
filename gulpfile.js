@@ -4,6 +4,7 @@ const stylus = require('gulp-stylus')
 const connect = require('gulp-connect')
 const imagemin = require('gulp-imagemin')
 const data = require('gulp-data')
+const babel = require('gulp-babel')
 
 gulp.task('pug', () => {
     gulp.src('./src/*.pug')
@@ -20,7 +21,16 @@ gulp.task('stylus', () => {
             compress: true
         }))
         .pipe(gulp.dest('./out/assets/styles'))
-        .pipe(connect.reload())        
+        .pipe(connect.reload())    
+})
+
+gulp.task('babel', () => {
+    gulp.src('./src/assets/scripts/*.js')
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(gulp.dest('./out/assets/scripts'))
+        .pipe(connect.reload())            
 })
 
 gulp.task('imagemin', () => {
@@ -40,7 +50,8 @@ gulp.task('watch', () => {
     gulp.watch(['./src/*.pug', './src/layouts/*.pug', './src/partials/*.pug'],['pug'])
     gulp.watch(['./src/assets/styles/*.styl', './src/assets/styles/modules/*.styl'],['stylus'])
     // gulp.watch(['./src/assets/img/*'],['imagemin'])
+    gulp.watch(['./src/assets/scripts/*.js'],['babel'])
 })
 
-gulp.task('build', ['pug', 'stylus', 'imagemin'])
+gulp.task('build', ['pug', 'stylus', 'imagemin', 'babel'])
 gulp.task('server', ['serve', 'watch'])

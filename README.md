@@ -27,6 +27,7 @@ $ npm install
 - Task Runner: [Gulp](http://gulpjs.com/)
 - HTML Template Engine: [Pug](https://pugjs.org/api/getting-started.html)
 - CSS Preprocessor: [Stylus](http://stylus-lang.com/)
+- JS Transpiler: [Babel](https://babeljs.io/)
 
 ## Folders Structure
 
