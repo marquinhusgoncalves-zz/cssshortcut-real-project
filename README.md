@@ -1,6 +1,8 @@
 # CSS Shortcut
 
 [![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](https://github.com/marquinhusgoncalves/cssshortcut-real-project/LICENSE.md)
+[![Build Status](https://travis-ci.org/marquinhusgoncalves/cssshortcut-real-project.svg?branch=master)](https://travis-ci.org/marquinhusgoncalves/cssshortcut-real-project)
+[![devDependencies Status](https://david-dm.org/marquinhusgoncalves/cssshortcut-real-project/dev-status.svg)](https://david-dm.org/marquinhusgoncalves/cssshortcut-real-project?type=dev)
 
 > :rocket: A template to help you create open source projects more organized.
 
