@@ -2,7 +2,7 @@ language: node_js
 node_js: stable
 sudo: required
 before_script:
-- npm intall -g gulp-cli
+- npm install -g gulp-cli
 script:
 - gulp lint
 - gulp stylint
