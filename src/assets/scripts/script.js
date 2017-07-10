@@ -1,5 +1,5 @@
-const foo = () => {
-  console.log('bar');
+const foo = (x) => {
+  return x;
 };
 
-foo();
+foo('Teste');
