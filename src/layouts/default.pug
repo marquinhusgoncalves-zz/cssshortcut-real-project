@@ -38,7 +38,8 @@ html
     body(data-senna)
         include ./../partials/header.pug
 
-        block content
+        main(data-senna-surface)#content.main
+            block content
 
         include ./../partials/footer.pug
 
