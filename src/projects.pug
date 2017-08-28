@@ -1,7 +1,7 @@
 extends ./layouts/default.pug
 
 block content
-	main.main.container
+	main(data-senna-surface).main.container#main
 		div.projects
 			section.projects-list
 				h1.heading-lv1 Projects
@@ -13,4 +13,3 @@ block content
 							include icons/star-icon.html
 							span.project-star-count=project.stars
 						p.project-description=project.description
-				
