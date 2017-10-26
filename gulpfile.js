@@ -7,6 +7,7 @@ const data = require('gulp-data')
 const babel = require('gulp-babel')
 const lint = require('gulp-eslint')
 const stylint = require('gulp-stylint')
+const ghPages = require('gulp-gh-pages');
 
 gulp.task('pug', () => {
     gulp.src('./src/*.pug')
@@ -23,21 +24,21 @@ gulp.task('stylus', () => {
             compress: true
         }))
         .pipe(gulp.dest('./out/assets/styles'))
-        .pipe(connect.reload())    
+        .pipe(connect.reload())
 })
 
 gulp.task('stylint', () => {
     gulp.src(['./src/assets/styles/*.styl', './src/assets/styles/modules/*.styl'])
         .pipe(stylint({config: '.stylintrc'}))
         .pipe(stylint.reporter())
-        .pipe(connect.reload())    
+        .pipe(connect.reload())
 })
 
 gulp.task('lint', () => {
     gulp.src('./src/assets/scripts/*.js')
         .pipe(lint())
         .pipe(lint.format())
-        .pipe(connect.reload())     
+        .pipe(connect.reload())
 })
 
 gulp.task('babel', () => {
@@ -46,7 +47,7 @@ gulp.task('babel', () => {
             presets: ['es2015']
         }))
         .pipe(gulp.dest('./out/assets/scripts'))
-        .pipe(connect.reload())            
+        .pipe(connect.reload())
 })
 
 gulp.task('imagemin', () => {
@@ -62,6 +63,11 @@ gulp.task('serve', () => {
     })
 })
 
+gulp.task('ghpages', () => {
+    gulp.src('./out/**/*')
+      .pipe(ghPages());
+  });
+
 gulp.task('watch', () => {
     gulp.watch(['./src/*.pug', './src/layouts/*.pug', './src/partials/*.pug'],['pug'])
     gulp.watch(['./src/assets/styles/*.styl', './src/assets/styles/modules/*.styl'],['stylint', 'stylus'])
@@ -71,3 +77,4 @@ gulp.task('watch', () => {
 
 gulp.task('build', ['pug', 'stylint','stylus', 'imagemin', 'lint', 'babel'])
 gulp.task('server', ['serve', 'watch'])
+gulp.task('deploy', ['build', 'ghpages'])
