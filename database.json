@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "id": "01",
+      "name": "Star wars"
+    },
+    {
+      "id": "02",
+      "name": "Star trek"
+    },
+    {
+      "id": "03",
+      "name": "Power rangers"
+    },
+    {
+      "id": "04",
+      "name": "Tom & Jerry"
+    }
+  ]
+}
